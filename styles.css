@@ -1,21 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 
 
-:root{
+:root {
 
-    --primary-color:#4267B2;
-    --dark-gray:#4B5563;
+    --primary-color: #4267B2;
+    --dark-gray: #4B5563;
+    --off-white: #F3F4F6;
 }
 
 
 
-body{
+body {
 
- font-family: 'Work Sans', 
- sans-serif;
+    font-family: 'Work Sans',
+        sans-serif;
 }
 
-hr{
+hr {
 
     margin: 2rem 0rem;
 }
@@ -23,16 +24,17 @@ hr{
 /* container */
 
 .container {
-padding: 0rem 1 rem;
+    padding: 0rem 1 rem;
 
 }
 
-.container-centre {
+.container-center {
 
-max-width: 600px;
-margin: auto;
+    max-width: 600px;
+    margin: auto;
 
 }
+
 /* links */
 
 .link {
@@ -42,8 +44,7 @@ margin: auto;
 
 .link-primary {
 
-    background-color: var
-    (--primary-color);
+    background-color: var (--primary-color);
     border-radius: 0.5rem;
     color: white
 }
@@ -51,8 +52,7 @@ margin: auto;
 .link-secondary {
     color: var(--primary-color);
     border-radius: 0.5rem;
-    border: 1px solid var
-    (--primary-color);
+    border: 1px solid var (--primary-color);
 }
 
 /* look for BEM naming convention */
@@ -60,47 +60,46 @@ margin: auto;
 
 /* lists */
 
-.list-non-bullet{
+.list-non-bullet {
 
-    list-style:none;
+    list-style: none;
 }
 
-.list-item-inline{
+.list-item-inline {
 
-    display:inline;
+    display: inline;
     margin: 0.5rem;
-    
+
 }
 
 /* navigation */
 
 .navigation {
 
-background-color: var(--primary-color);
-color:white
-padding: 1rem;
-border-bottom-left-radius: 1rem;
+    background-color: var(--primary-color);
+    color: white padding: 1rem;
+    border-bottom-left-radius: 1rem;
 }
 
 
 .navigation .nav-brand {
 
-font-weight: bold;
+    font-weight: bold;
 
 }
 
-.navigation .nav-pills{
+.navigation .nav-pills {
 
-    text-align:right;
+    text-align: right;
 }
 
 .navigation .link {
 
-color:white;
+    color: white;
 
 }
 
-.navigation .link-active{
+.navigation .link-active {
 
     font-weight: bold;
 }
@@ -109,15 +108,15 @@ color:white;
 
 .hero {
 
-padding: 2rem;
+    padding: 2rem;
 
 }
 
-.hero .hero-img{
+.hero .hero-img {
 
-max-width:450px;
-display:block;
-margin:auto;
+    max-width: 450px;
+    display: block;
+    margin: auto;
 
 }
 
@@ -128,21 +127,23 @@ margin:auto;
     color: var(--dark-gray);
 }
 
-.hero .hero-heading .header-inverted{
+.hero .hero-heading .header-inverted {
 
     color: var(--primary-color);
 }
 
+/* section */
 
+.section {
+padding= 2rem;
+}
 
+.section h1 {
 
+    text-align: center;
+    }
 
+    .ow {
 
-
-
-
-
-
-
-
-
+        background-color:var(--off-white);
+    }
