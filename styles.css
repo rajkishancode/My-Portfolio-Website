@@ -4,6 +4,7 @@
 :root{
 
     --primary-color:#4267B2;
+    --dark-gray:#4B5563;
 }
 
 
@@ -71,10 +72,66 @@ margin: auto;
     
 }
 
+/* navigation */
+
+.navigation {
+
+background-color: var(--primary-color);
+color:white
+padding: 1rem;
+border-bottom-left-radius: 1rem;
+}
 
 
+.navigation .nav-brand {
 
+font-weight: bold;
 
+}
+
+.navigation .nav-pills{
+
+    text-align:right;
+}
+
+.navigation .link {
+
+color:white;
+
+}
+
+.navigation .link-active{
+
+    font-weight: bold;
+}
+
+/* header */
+
+.hero {
+
+padding: 2rem;
+
+}
+
+.hero .hero-img{
+
+max-width:450px;
+display:block;
+margin:auto;
+
+}
+
+.hero .hero-heading {
+
+    padding-top: 1 rem;
+
+    color: var(--dark-gray);
+}
+
+.hero .hero-heading .header-inverted{
+
+    color: var(--primary-color);
+}
 
 
 
