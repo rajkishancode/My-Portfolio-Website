@@ -1,8 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+
+:root{
+
+    --primary-color:#4267B2;
+}
+
+
+
 body{
 
  font-family: 'Work Sans', 
  sans-serif;
+}
+
+hr{
+
+    margin: 2rem 0rem;
 }
 
 /* container */
@@ -21,7 +35,7 @@ margin: auto;
 /* links */
 
 .link {
-    text-decoration:none;
+    text-decoration: none;
     padding: 0.5rem 1rem;
 }
 
@@ -33,7 +47,7 @@ margin: auto;
     color: white
 }
 
-.secondary-link {
+.link-secondary {
     color: var(--primary-color);
     border-radius: 0.5rem;
     border: 1px solid var
