@@ -4,3 +4,44 @@ body{
  font-family: 'Work Sans', 
  sans-serif;
 }
+
+/* container */
+
+.container {
+padding: 0rem 1 rem;
+
+}
+
+.container-centre {
+
+max-width: 600px;
+margin: auto;
+
+}
+/* links */
+
+.link {
+
+    text-decoration: none;
+    padding: 0.5rem 1rem:
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
