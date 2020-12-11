@@ -57,6 +57,20 @@ margin: auto;
 /* look for BEM naming convention */
 
 
+/* lists */
+
+.list-non-bullet{
+
+    list-style:none;
+}
+
+.list-item-inline{
+
+    display:inline;
+    margin: 0.5rem;
+    
+}
+
 
 
 
