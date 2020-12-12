@@ -45,7 +45,7 @@ hr {
 
 .link-primary {
 
-    background-color: var (--primary-color);
+    background-color: var(--primary-color);
     border-radius: 0.5rem;
     color: white
 }
@@ -53,7 +53,7 @@ hr {
 .link-secondary {
     color: var(--primary-color);
     border-radius: 0.5rem;
-    border: 1px solid var (--primary-color);
+    border: 1px solid var(--primary-color);
 }
 
 /* look for BEM naming convention */
@@ -110,6 +110,7 @@ hr {
 .hero {
     
     padding: 2rem;
+    padding-top: 5rem;
 
 }
 
@@ -136,17 +137,19 @@ hr {
 /* section */
 
 .section {
-padding= 2rem;
+padding: 2rem;
 }
 
 .section h1 {
 
     text-align: center;
+    
     }
 
     .ow {
 
         background-color:var(--off-white);
+        padding-bottom: 2rem;
     }
 
 
@@ -161,6 +164,12 @@ padding= 2rem;
 
 .footer .link {
 color:white;
+}
+
+.footer .footer-header{
+
+    font-weight: bold;
+    font-size:large;
 }
 
 .footer ul{
