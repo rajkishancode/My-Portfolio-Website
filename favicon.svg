@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+    <style>
+        circle { fill: #14161b; }
+        text { fill: #f7f6f3; }
+        @media (prefers-color-scheme: dark) {
+            circle { fill: #eceef2; }
+            text { fill: #0d0f14; }
+        }
+    </style>
+    <circle cx="32" cy="32" r="32"/>
+    <text x="32" y="41" text-anchor="middle" font-family="ui-monospace, Consolas, monospace" font-size="26" font-weight="600">rk</text>
+</svg>

@@ -1,85 +1,335 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home | Raj Kishan</title>
-        <link href="styles.css" rel="stylesheet">
-    </head>
-    <body>
-        <nav class="navigation container">
-            <div class="nav-brand">IAMDEVELOPER</div>
-            <ul class="list-non-bullet nav-pills">
-                <li class="list-item-inline"><a class="link link-active" href="/">Home</a></li>
-                <li class="list-item-inline"><a class="link" href="/projects.html">Projects</a></li>
-                <li class="list-item-inline"><a class="link" href="/blogs.html">Blogs</a></li>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raj Kishan — Frontend Engineer</title>
+    <meta name="description" content="Raj Kishan is a frontend engineer from India. Six years of building for the web, from small vanilla JS apps to enterprise ERP software.">
+    <meta name="theme-color" content="#0d0f14" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f7f6f3" media="(prefers-color-scheme: light)">
+    <meta property="og:title" content="Raj Kishan — Frontend Engineer">
+    <meta property="og:description" content="Six years of building for the web. Projects, writing and what I'm working on now.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script>
+        // set the saved theme before first paint so there is no flash
+        try {
+            const saved = localStorage.getItem('theme');
+            if (saved) document.documentElement.dataset.theme = saved;
+        } catch (e) {}
+    </script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-            </ul>
+    <div class="backdrop" aria-hidden="true">
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+        <div class="grid-lines"></div>
+    </div>
 
-        </nav>
+    <nav class="nav" aria-label="Main">
+        <a class="nav-brand" href="#top" aria-label="Raj Kishan, back to top">
+            <span class="brand-mark">rk</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#writing">Writing</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" type="button" aria-label="Switch colour theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg>
+        </button>
+    </nav>
 
-        
-    <header class="hero">
-    <img class="hero-img" src="hero.svg" alt="a boy working on laptop"/>
-    <h2 class="hero-heading">Hi, I am Raj Kishan.<span class ="header-inverted"> A passionate frontend developer </span></h2>
-    </header>
+    <main id="main">
 
+        <header class="hero" id="top">
+            <p class="eyebrow"><span class="pulse" aria-hidden="true"></span> Frontend engineer · India</p>
+            <h1 class="hero-title">
+                Hi, I'm Raj.<br>
+                I build <em>interfaces</em><br>
+                people actually use.
+            </h1>
+            <p class="hero-sub">
+                Six years ago this site was a list of small JavaScript apps I made while learning.
+                Today I build big, data-heavy business software in React. I still enjoy the same thing:
+                taking something messy and making it simple to use.
+            </p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="#work">See my work <span aria-hidden="true">↓</span></a>
+                <a class="btn btn-ghost" href="https://github.com/rajkishancode" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+        </header>
 
-    <section class="section ow">
-        <div class="container-center"><h1>Technologies</h1>
-        <p>I am familiar with HTML5,CSS3,Javascript,NodeJS,ReactJS,Git and Web Hosting</p>
-        </div>
-        
+        <section class="section" id="about" aria-labelledby="about-heading">
+            <div class="section-head reveal">
+                <span class="section-index">01</span>
+                <h2 id="about-heading">About</h2>
+            </div>
+
+            <div class="bento">
+                <article class="card card-now reveal">
+                    <span class="card-label">Right now</span>
+                    <h3>Building enterprise software at <em>FlashCorp</em></h3>
+                    <p>
+                        I work on a large ERP platform: form and report designers, a template builder,
+                        data grids that handle thousands of rows, and dashboards. Alongside that I write
+                        browser automation bots with Playwright and help ship our React Native app.
+                    </p>
+                    <ul class="tags">
+                        <li>ERP</li><li>Low-code designers</li><li>Automation</li><li>Mobile</li>
+                    </ul>
+                </article>
+
+                <article class="card card-stat reveal">
+                    <span class="card-label">Shipping since</span>
+                    <p class="big-number">2020</p>
+                    <p class="muted">Started with neog.camp, never stopped.</p>
+                </article>
+
+                <article class="card card-time reveal">
+                    <span class="card-label">Local time</span>
+                    <p class="clock" data-clock>--:--</p>
+                    <p class="muted">IST · UTC+5:30</p>
+                </article>
+
+                <article class="card card-stack reveal" id="stack">
+                    <span class="card-label">Tools I use every day</span>
+                    <ul class="chips">
+                        <li>React</li>
+                        <li>JavaScript</li>
+                        <li>Node.js</li>
+                        <li>React Native · Expo</li>
+                        <li>Playwright</li>
+                        <li>AG Grid</li>
+                        <li>ECharts</li>
+                        <li>Material UI</li>
+                        <li>Ant Design</li>
+                        <li>CSS</li>
+                        <li>Git</li>
+                    </ul>
+                </article>
+
+                <article class="card card-then reveal">
+                    <span class="card-label">Then vs now</span>
+                    <div class="then-now">
+                        <div>
+                            <span class="mono muted">2020</span>
+                            <p>Minion translator in vanilla JS</p>
+                        </div>
+                        <span class="arrow" aria-hidden="true">→</span>
+                        <div>
+                            <span class="mono muted">2026</span>
+                            <p>Drag-and-drop form builder for an ERP</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </section>
 
-
-        <section class="section">
-            <div class="container-center"><h1>Projects</h1>
-            <p>I like to showcase my work and thus, you can see my projects online</p>
-            <a class="link link-primary" href="/projects.html" >See Projects</a>
+        <section class="section" id="work" aria-labelledby="work-heading">
+            <div class="section-head reveal">
+                <span class="section-index">02</span>
+                <h2 id="work-heading">Selected work</h2>
             </div>
-            
-            
-            </section>
 
-            <section class="section ow">
-                <div class="container-center"><h1>Blogs</h1>
-                <p>I am working on some technical and non-technical blogs.
-                    I like document my journey of learning
-                </p>
-                <a class= "link link-secondary" href="/blogs.html">Read Blogs</a>
-                </div>
-                
-                </section>
+            <div class="projects">
+                <article class="project reveal">
+                    <div class="thumb thumb-buddy" aria-hidden="true">
+                        <div class="mock-post">
+                            <div class="mock-row"><span class="mock-avatar"></span><span class="mock-line w-40"></span></div>
+                            <div class="mock-image"></div>
+                            <div class="mock-row"><span class="mock-heart">♥</span><span class="mock-line w-25"></span></div>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta"><span>2023</span><span>Social app</span></div>
+                        <h3>Buddy</h3>
+                        <p>A social media app where people share photos, like, comment, bookmark posts and follow each other.</p>
+                        <ul class="tags"><li>React</li><li>Auth</li><li>Social feed</li></ul>
+                        <div class="project-links">
+                            <a href="https://buddy-social-9x0an56e0-rajkishancode.vercel.app/login" target="_blank" rel="noopener">Live <span aria-hidden="true">↗</span></a>
+                            <a href="https://github.com/rajkishancode/buddy-social" target="_blank" rel="noopener">Code <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </div>
+                </article>
 
-                
-<footer class="footer">
-<div class="footer-header">Social media presence</div>
-<ul class="social links list-non-bullet">
- <li class="list-item-inline">
-    <a class="link" href="https://github.com/rajkishancode">
-        Github
-    </a>
+                <article class="project reveal">
+                    <div class="thumb thumb-cart" aria-hidden="true">
+                        <div class="mock-shop">
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta"><span>2023</span><span>E-commerce</span></div>
+                        <h3>QuickCart</h3>
+                        <p>An online clothing store built with React. Browse trendy outfits, add them to the cart and check out.</p>
+                        <ul class="tags"><li>React</li><li>Shopping cart</li><li>Routing</li></ul>
+                        <div class="project-links">
+                            <a href="https://quickcart-ecommerce.vercel.app/" target="_blank" rel="noopener">Live <span aria-hidden="true">↗</span></a>
+                            <a href="https://github.com/rajkishancode/quickcart-ecommerce" target="_blank" rel="noopener">Code <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </div>
+                </article>
 
-</li>
- <li class="list-item-inline">
-    <a class="link" href="https://www.linkedin.com/in/rajkishancode">
-        Linkedin
-    </a>
+                <article class="project reveal">
+                    <div class="thumb thumb-calm" aria-hidden="true">
+                        <div class="mock-ui">
+                            <span class="mock-btn"></span>
+                            <span class="mock-btn ghost"></span>
+                            <span class="mock-toggle"></span>
+                            <span class="mock-badge">Calm</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta"><span>2022</span><span>Open source</span></div>
+                        <h3>Calm UI</h3>
+                        <p>A free CSS component library with ready-made pieces you can mix to build responsive pages quickly.</p>
+                        <ul class="tags"><li>CSS</li><li>Design system</li><li>Docs</li></ul>
+                        <div class="project-links">
+                            <a href="https://calm-ui.netlify.app/" target="_blank" rel="noopener">Live <span aria-hidden="true">↗</span></a>
+                            <a href="https://github.com/rajkishancode/Calm-Designs" target="_blank" rel="noopener">Code <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
 
-</li>
- <li class="list-item-inline">
-    <a class="link" href="https://twitter.com/raj_kishan_">
-        Twitter
-    </a>
+            <div class="archive reveal" id="archive">
+                <h3 class="archive-title">Archive <span class="muted">· the early stuff, kept for nostalgia</span></h3>
+                <table>
+                    <thead>
+                        <tr><th scope="col">Year</th><th scope="col">Project</th><th scope="col" class="hide-sm">Built with</th><th scope="col"><span class="sr-only">Links</span></th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="mono">2021</td>
+                            <td><strong>Stock Calculator</strong><span class="desc">Tells you if your stock made a profit or loss</span></td>
+                            <td class="hide-sm">Vanilla JS</td>
+                            <td class="links"><a href="https://stock-calculator-app.netlify.app/" target="_blank" rel="noopener">Live</a><a href="https://github.com/rajkishancode/Stock-Calculator" target="_blank" rel="noopener">Code</a></td>
+                        </tr>
+                        <tr>
+                            <td class="mono">2021</td>
+                            <td><strong>Palindrome Birthday</strong><span class="desc">Checks if your birthday is a palindrome, and finds the nearest one</span></td>
+                            <td class="hide-sm">Vanilla JS</td>
+                            <td class="links"><a href="https://palindrome-bday-app.netlify.app/" target="_blank" rel="noopener">Live</a><a href="https://github.com/rajkishancode/Palindrome-Birthday" target="_blank" rel="noopener">Code</a></td>
+                        </tr>
+                        <tr>
+                            <td class="mono">2021</td>
+                            <td><strong>Fun with Triangles</strong><span class="desc">Learn about triangles while having some fun</span></td>
+                            <td class="hide-sm">Vanilla JS</td>
+                            <td class="links"><a href="https://triangles-fun-web-app.netlify.app/" target="_blank" rel="noopener">Live</a><a href="https://github.com/rajkishancode/Fun-with-Triangles" target="_blank" rel="noopener">Code</a></td>
+                        </tr>
+                        <tr>
+                            <td class="mono">2021</td>
+                            <td><strong>Cash Register</strong><span class="desc">Works out the change a cashier should return</span></td>
+                            <td class="hide-sm">Vanilla JS</td>
+                            <td class="links"><a href="https://cash-register-manager-web-app.netlify.app/" target="_blank" rel="noopener">Live</a><a href="https://github.com/rajkishancode/Cash-Register" target="_blank" rel="noopener">Code</a></td>
+                        </tr>
+                        <tr>
+                            <td class="mono">2021</td>
+                            <td><strong>Lucky Birthday</strong><span class="desc">Find out if you were born lucky</span></td>
+                            <td class="hide-sm">Vanilla JS</td>
+                            <td class="links"><a href="https://lucky-birth-dayy.netlify.app/" target="_blank" rel="noopener">Live</a><a href="https://github.com/rajkishancode/Lucky-Birthday" target="_blank" rel="noopener">Code</a></td>
+                        </tr>
+                        <tr>
+                            <td class="mono">2020</td>
+                            <td><strong>Podcast Recommender</strong><span class="desc">Podcast picks for every genre</span></td>
+                            <td class="hide-sm">React</td>
+                            <td class="links"><a href="https://8hivf.csb.app/" target="_blank" rel="noopener">Live</a><a href="https://github.com/rajkishancode/PodcastRecommender" target="_blank" rel="noopener">Code</a></td>
+                        </tr>
+                        <tr>
+                            <td class="mono">2020</td>
+                            <td><strong>Sports Emoji Interpreter</strong><span class="desc">Tap a sports emoji, get its meaning</span></td>
+                            <td class="hide-sm">React</td>
+                            <td class="links"><a href="https://5ejee.csb.app/" target="_blank" rel="noopener">Live</a><a href="https://github.com/rajkishancode/SportInterpretor/tree/main/src" target="_blank" rel="noopener">Code</a></td>
+                        </tr>
+                        <tr>
+                            <td class="mono">2020</td>
+                            <td><strong>Pirate Translator</strong><span class="desc">English to pirate speak</span></td>
+                            <td class="hide-sm">Vanilla JS · API</td>
+                            <td class="links"><a href="https://pirates-language.netlify.app/" target="_blank" rel="noopener">Live</a><a href="https://github.com/rajkishancode/PirateSpeak" target="_blank" rel="noopener">Code</a></td>
+                        </tr>
+                        <tr>
+                            <td class="mono">2020</td>
+                            <td><strong>Minion Translator</strong><span class="desc">English to Minionese. Banana!</span></td>
+                            <td class="hide-sm">Vanilla JS · API</td>
+                            <td class="links"><a href="https://letsspeakminion.netlify.app/" target="_blank" rel="noopener">Live</a><a href="https://github.com/rajkishancode/banana-speak" target="_blank" rel="noopener">Code</a></td>
+                        </tr>
+                        <tr>
+                            <td class="mono">2020</td>
+                            <td><strong>JavaScript Quiz</strong><span class="desc">CLI quiz to see which friend really knows JS</span></td>
+                            <td class="hide-sm">Node.js CLI</td>
+                            <td class="links"><a href="https://replit.com/@RajKishan/Quiz-on-Javascript?embed=1&amp;output=1#index.js" target="_blank" rel="noopener">Live</a><a href="https://github.com/rajkishancode/Quiz-on-JavaScript-1" target="_blank" rel="noopener">Code</a></td>
+                        </tr>
+                        <tr>
+                            <td class="mono">2020</td>
+                            <td><strong>How well do you know me?</strong><span class="desc">CLI quiz about me</span></td>
+                            <td class="hide-sm">Node.js CLI</td>
+                            <td class="links"><a href="https://replit.com/@RajKishan/Do-You-Know-Me?embed=1&amp;output=1#index.js" target="_blank" rel="noopener">Live</a><a href="https://github.com/rajkishancode/Do-You-Know-Me-" target="_blank" rel="noopener">Code</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
-</li>
+        <section class="section" id="writing" aria-labelledby="writing-heading">
+            <div class="section-head reveal">
+                <span class="section-index">03</span>
+                <h2 id="writing-heading">Writing</h2>
+            </div>
 
-</ul>
-</footer>
+            <ul class="posts">
+                <li class="reveal">
+                    <a class="post" href="https://rajkishan.hashnode.dev/useeffect-hook-in-react" target="_blank" rel="noopener">
+                        <span class="post-date mono">Aug 2022</span>
+                        <span class="post-main">
+                            <span class="post-title">useEffect Hook in React</span>
+                            <span class="post-desc">How to use the useEffect hook, and why it is tricky at first.</span>
+                        </span>
+                        <span class="post-tag">React</span>
+                        <span class="post-arrow" aria-hidden="true">↗</span>
+                    </a>
+                </li>
+                <li class="reveal">
+                    <a class="post" href="https://rajkishan.hashnode.dev/a-beginners-guide-to-promise-in-javascript" target="_blank" rel="noopener">
+                        <span class="post-date mono">Aug 2022</span>
+                        <span class="post-main">
+                            <span class="post-title">A Beginner's Guide to Promises in JavaScript</span>
+                            <span class="post-desc">Promises and promise chaining, explained with simple drawings.</span>
+                        </span>
+                        <span class="post-tag">JavaScript</span>
+                        <span class="post-arrow" aria-hidden="true">↗</span>
+                    </a>
+                </li>
+            </ul>
+            <a class="text-link reveal" href="https://rajkishan.hashnode.dev" target="_blank" rel="noopener">All posts on Hashnode <span aria-hidden="true">↗</span></a>
+        </section>
 
+        <section class="contact" id="contact" aria-labelledby="contact-heading">
+            <p class="eyebrow reveal">04 · Contact</p>
+            <h2 class="contact-title reveal" id="contact-heading">Let's build<br>something <em>good</em>.</h2>
+            <p class="hero-sub reveal">The fastest way to reach me is a message on LinkedIn.</p>
+            <ul class="socials reveal">
+                <li><a href="https://www.linkedin.com/in/rajkishancode" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a></li>
+                <li><a href="https://github.com/rajkishancode" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></li>
+                <li><a href="https://x.com/raj_10aug" target="_blank" rel="noopener">X / Twitter <span aria-hidden="true">↗</span></a></li>
+                <li><a href="https://rajkishan.hashnode.dev" target="_blank" rel="noopener">Hashnode <span aria-hidden="true">↗</span></a></li>
+            </ul>
+        </section>
 
-        
-        
-    </body>
-    </html>
+    </main>
+
+    <footer class="footer">
+        <span>© <span data-year>2026</span> Raj Kishan</span>
+        <span class="muted">Hand-written HTML, CSS and a little JS. No framework. v1 was 2020.</span>
+    </footer>
+</body>
+</html>
